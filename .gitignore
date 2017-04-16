@@ -1,0 +1,9 @@
+gate/node_modules
+gate/public/storage
+gate/public/hot
+gate/storage/*.key
+gate/vendor
+gate/.idea
+gate/Homestead.json
+gate/Homestead.yaml
+gate/.env
