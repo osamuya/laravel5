@@ -1,5 +1,7 @@
 # Laravel5
 
+## Index
+- [/sample](/sample): bladeのテストページ
 
 ## Develop Env
 ### Mac
