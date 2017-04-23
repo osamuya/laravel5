@@ -1,5 +1,6 @@
 # Laravel5
 
+
 ## Develop Env
 ### Mac
 - URL: [http://laravel.local/](http://laravel.local/)
@@ -16,18 +17,18 @@
 ##### mac
 ````
 #github
-Host                    github.com
-HostName                github.com
-IdentityFile  /Users/osamu/Dropbox/sshkey/osamuya/osamuya.pem
+Host            github.com
+HostName        github.com
+IdentityFile    /PATH/xxxx.pem
 User            git
 ````
 ##### Lolipop
 ````
 #github
-Host                    github.com
-HostName                github.com
-IdentityFile    /home/users/2/pupu.jp-omnioo/.ssh/sshkey/osamuya/osamuya.pem
-User                    git
+Host            github.com
+HostName        github.com
+IdentityFile    /PATH/xxxx.pem
+User            git
 ````
 
 ## Command
