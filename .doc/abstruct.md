@@ -29,3 +29,10 @@ HostName                github.com
 IdentityFile    /home/users/2/pupu.jp-omnioo/.ssh/sshkey/osamuya/osamuya.pem
 User                    git
 ````
+
+## Command
+### Lolipop
+PHPのcliを使う場合。
+````
+/usr/local/php7.1/bin/php artisan route:list
+````
