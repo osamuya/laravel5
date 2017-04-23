@@ -26,3 +26,12 @@ Route::get('/', function () {
 Route::get('/sample', function () {
     return view('sample/index');
 });
+
+Route::get('/list', function () {
+    return view('sample/list');
+});
+
+Route::get('/sample_ctrl', 'SampleController@index');
+
+
+

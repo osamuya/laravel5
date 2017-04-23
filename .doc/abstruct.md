@@ -1,5 +1,9 @@
 # Laravel5
 
+## Index
+- [/sample](/sample): bladeのテストページ
+
+
 ## Develop Env
 ### Mac
 - URL: [http://laravel.local/](http://laravel.local/)
