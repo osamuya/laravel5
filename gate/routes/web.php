@@ -32,6 +32,15 @@ Route::get('/list', function () {
 });
 
 Route::get('/sample_ctrl', 'SampleController@index');
+Route::get('/sample_ctrl/{id}', 'SampleController@page');
 
+//Route::any('foo', function () {
+//    return 'Hello World';
+//});
 
+Route::get('user/{id}', function ($id) {
+    return 'User '.$id;
+});
+
+Route::get('users/{id}', 'UsersController@page');
 
