@@ -15,10 +15,10 @@ class UsersController extends Controller
      */	
 	public function page($id)
     {
-//		$test = DB::connection('mysql');
-//		$results = DB::select('select * from latest');
+		$test = DB::connection('mysql');
+		$results = DB::select('select * from latest');
 //		DB::statement('drop table latest');
-//		var_dump($test);
+		var_dump($results);
 //		echo $id;
         return view('users/page')->with('id',$id);
     }
