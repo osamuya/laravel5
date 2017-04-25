@@ -12,14 +12,14 @@ class UsersController extends Controller
      *
      * @param  int  $id
      * @return Response
-     */	
-	public function page($id)
+     */
+    public function page($id)
     {
-//		$test = DB::connection('mysql');
-//		$results = DB::select('select * from latest');
-//		DB::statement('drop table latest');
-//		var_dump($test);
-//		echo $id;
+        $test = DB::connection('mysql');
+        $results = DB::select('select * from latest where id= :id',['id' => 1]);
+//        DB::statement('drop table latest');
+        var_dump($results);
+//        echo $id;
         return view('users/page')->with('id',$id);
     }
 
