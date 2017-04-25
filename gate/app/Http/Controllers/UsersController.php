@@ -16,7 +16,7 @@ class UsersController extends Controller
 	public function page($id)
     {
 		$test = DB::connection('mysql');
-		$results = DB::select('select * from latest');
+		$results = DB::select('select * from latest where id = id',[ 'id'=> $id ]);
 //		DB::statement('drop table latest');
 		var_dump($results);
 //		echo $id;
