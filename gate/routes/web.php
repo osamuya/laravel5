@@ -38,9 +38,10 @@ Route::get('/sample_ctrl/{id}', 'SampleController@page');
 //    return 'Hello World';
 //});
 
-Route::get('user/{id}', function ($id) {
-    return 'User '.$id;
-});
+//Route::get('user/{id}', function ($id) {
+//    return 'User '.$id;
+//});
 
 Route::get('users/{id}', 'UsersController@page');
+Route::get('model/{id}', 'ModelController@index');
 
