@@ -12,15 +12,22 @@ class UsersController extends Controller
      *
      * @param  int  $id
      * @return Response
-     */	
-	public function page($id)
+     */
+    public function page($id)
     {
-		$test = DB::connection('mysql');
-		$results = DB::select('select * from latest where id = :id', ['id' => $id]);
+
+//		$test = DB::connection('mysql');
+//		$results = DB::select('select * from latest where id = :id', ['id' => $id]);
 //		$re = DB::insert('insert into latest (id, title) values (?, ?)', [2, 'Dayle']);
 //		DB::statement('drop table latest');
-		var_dump($results);
+//		var_dump($results);
 //		echo $id;
+
+
+        $test = DB::connection('mysql');
+        $results = DB::select('select * from latest where id = :id',[ 'id'=> $id ]);
+        var_dump($results);
+//        echo $id;
         return view('users/page')->with('id',$id);
     }
 
