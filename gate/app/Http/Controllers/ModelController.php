@@ -30,10 +30,12 @@ class ModelController extends Controller
         foreach($data_projects as $key=>$val) {
 //            $val = preg_replace_callback('|\\\\u([0-9a-f]{4})|i', function($matched){
 //            return mb_convert_encoding(pack('H*', $matched[1]), 'UTF-8', 'UTF-16');}, $val);
-            echo "{$key}=>{$val}<br>\n";
+//            $val = '';
+//            echo "{$key}=>{$val}<br>\n";
         }
-
-
+        echo "<pre>";
+        var_dump($data_projects[0]->remark);
+        echo "</pre>";
 
 //        echo "<pre>";
 //        var_dump($data_projects);
