@@ -28,8 +28,8 @@ class ModelController extends Controller
         // model where
         $data_projects = DataProject::where('id', 1)->get();
         foreach($data_projects as $key=>$val) {
-            $val = preg_replace_callback('|\\\\u([0-9a-f]{4})|i', function($matched){
-            return mb_convert_encoding(pack('H*', $matched[1]), 'UTF-8', 'UTF-16');}, $val);
+//            $val = preg_replace_callback('|\\\\u([0-9a-f]{4})|i', function($matched){
+//            return mb_convert_encoding(pack('H*', $matched[1]), 'UTF-8', 'UTF-16');}, $val);
             echo "{$key}=>{$val}<br>\n";
         }
 
