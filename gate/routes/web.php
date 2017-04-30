@@ -45,3 +45,7 @@ Route::get('/sample_ctrl/{id}', 'SampleController@page');
 Route::get('users/{id}', 'UsersController@page');
 Route::get('model/{id}', 'ModelController@index');
 
+// form
+//Route::match(['get', 'post'], '/', function () {
+Route::match(['get', 'post'],'members/signin', 'MembersController@signin');
+Route::get('members/signin_complete', 'MembersController@signin_complete');
