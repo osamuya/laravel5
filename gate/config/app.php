@@ -176,7 +176,13 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
+		
+		/*
+		 * Application Service Provider for original common utilities
+		 * 2017-05-01
+		 */
+//		App\Providers\UtilitiesServiceProvider::class,
+		
     ],
 
     /*
@@ -225,6 +231,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        // oroginal class 2017-05-01
+        'Utilities' => App\CommonLibrary\Utilities::class,
 
     ],
 

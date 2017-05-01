@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 
-
-
 use App\Http\Controllers\Controller;
 //use Input;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+//use App\Providers\Utilities;
+use App\CommonLibrary\Utilities;
 
 class MembersController extends Controller
 {
@@ -20,6 +20,12 @@ class MembersController extends Controller
      */
     public function signin(Request $request)
     {
+		
+		$return = Utilities::test();
+		var_dump($return);
+		
+//		$obj = new Utilities();
+		
 		var_dump($request->input('user_name'));
 		var_dump($request->input('user_password'));
 		var_dump($request->input('user_password2'));
