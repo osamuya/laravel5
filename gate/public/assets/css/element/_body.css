@@ -1,0 +1,20 @@
+/*top*/
+#main_vidual {
+  background: #fff;
+  position: relative;
+}
+
+#main_vidual img {
+  width: 100%;
+}
+
+#main_vidual .over_px {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#main_vidual #main_img {
+  height: 320px;
+  background: url("../img/top/001.jpg");
+}
