@@ -9,3 +9,7 @@
     <li><a href="/members/signin">/members/signin</a></li>
     <li><a href="members/signin_complete">/members/signin_complete</a></li>
 </ul>
+
+<ul>
+    <li><a href="/session/start">/session/start</a></li>
+</ul>

@@ -46,6 +46,13 @@ Route::get('users/{id}', 'UsersController@page');
 Route::get('model/{id}', 'ModelController@index');
 
 // form
-//Route::match(['get', 'post'], '/', function () {
 Route::match(['get', 'post'],'members/signin', 'MembersController@signin');
 Route::get('members/signin_complete', 'MembersController@signin_complete');
+
+// form
+Route::match(['get', 'post'],'members/signin', 'MembersController@signin');
+Route::get('members/signin_complete', 'MembersController@signin_complete');
+
+//DB session
+Route::get('session/{id}', 'SessionController@index');
+
