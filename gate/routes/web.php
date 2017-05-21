@@ -56,3 +56,24 @@ Route::get('members/signin_complete', 'MembersController@signin_complete');
 //DB session
 Route::get('session/{id}', 'SessionController@index');
 
+// user regist
+/*
+毎回アクセスの度に変わるハッシュをつけた方がいいんじゃないかと。
+*/
+Route::get('user/signin', 'User\SigninController@signin');
+Route::match(['get', 'post'],'user/signin/complete/{access_hash}', 'User\SigninController@complete');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
