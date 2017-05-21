@@ -13,3 +13,8 @@
 <ul>
     <li><a href="/session/start">/session/start</a></li>
 </ul>
+
+
+<ul>
+    <li><a href="/user/signin">/user/signin</a></li>
+</ul>
