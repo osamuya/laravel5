@@ -44,6 +44,12 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+		if (get_class($exception) == 'Illuminate\Session\TokenMismatchException'){
+			// 処理
+			// http://qiita.com/sawadashota/items/93ccd9b615455c88777c
+//			session errorとcsrf tokenのerrorを両方キャッチ
+			exit('Nothing token..');
+		}
         return parent::render($request, $exception);
     }
 
