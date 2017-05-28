@@ -15,6 +15,11 @@ class CreateLavelUsersTable extends Migration
     {
         Schema::create('lavel_users', function (Blueprint $table) {
             $table->increments('id');
+			$table->string('uniqeid', 64);
+			$table->string('email')->unique();
+			$table->string('password', 256);
+			$table->integer('count');
+			$table->softDeletes('delFlag');
             $table->timestamps();
         });
     }
