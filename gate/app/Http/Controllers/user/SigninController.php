@@ -8,7 +8,8 @@ use App\CommonLibrary\Utilities;
 use Illuminate\Support\Facades\DB;
 use App\LavelUser;
 use App\Http\Requests\StoreRequest;
-	
+
+
 //use Illuminate\View\Middleware\ShareErrorsFromSession;
 
 class SigninController extends Controller
