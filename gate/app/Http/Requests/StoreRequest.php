@@ -37,13 +37,12 @@ class StoreRequest extends FormRequest
 
     public function response(array $errors)
     {
-        if ($this->ajax() || $this->wantsJson()) {
-            # ここでいじれる
-            return new JsonResponse(['message' => 'じゆうじざい！','errors'=>$errors], 422);
-        }
-
-        parent::response($errors);
+//        if ($this->ajax() || $this->wantsJson()) {
+//            # ここでいじれる
+//            return new JsonResponse(['message' => 'じゆうじざい！','errors'=>$errors], 422);
+//        }
+//
+//        parent::response($errors);
     }
 
-}
 }
