@@ -15,15 +15,45 @@ use App\Http\Requests\StoreRequest;
 class SigninController extends Controller
 {
 
-	public function signin() {
+	public function signin(Request $request) {
+		
+		
+//		全セッションのダンプ
+//		var_dump($request->session()->all());
+		
+//		送信した内容を保存してFromに返す
+		$old_email = '';
+		if (isset($request->session()->all()["_old_input"]['Email'])) {
+			$old_email = $request->session()->all()["_old_input"]['Email'];
+		}
+		$old_password = '';
+		if (isset($request->session()->all()["_old_input"]['Password'])) {
+			$old_password = $request->session()->all()["_old_input"]['Password'];
+		}
+		
+//		var_dump($request->session()->get('Password'));
+		if ($request->session()->has('Password')) {
+			echo 'Hoooooooooooo!!!!!!!!';
+		}
 		
 		$access_hash = Utilities::makeAccessHash();
-		return view('user/signin')->with('access_hash',$access_hash);
+		return view('user/signin')
+			->with('access_hash',$access_hash)
+			->with('old_password',$old_password)
+			->with('old_email', $old_email);
 	}
 	
 	
 	// https://www.phpdoc.org/docs/latest/index.html
 	public function complete(StoreRequest $request, $access_hash) {
+		
+		// sessionに格納
+//		session(['Email' => $request->input('Email')]);
+//		session(['Password' => $request->input('Password')]);
+		
+		$request->session()->get('Email', $request->input('Email'));
+		$request->session()->get('Password', $request->input('Password'));
+		
 		
 		// do to validate
 		// この設定だけだとsaveされないだけなので、

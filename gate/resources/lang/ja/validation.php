@@ -83,7 +83,7 @@ return [
     ],
     'string'               => 'The :attribute must be a string.',
     'timezone'             => 'The :attribute must be a valid zone.',
-    'unique'               => 'The :attribute has already been taken.',
+    'unique'               => 'このメールアドレスは既に登録されています。',
     'uploaded'             => 'The :attribute failed to upload.',
     'url'                  => 'The :attribute format is invalid.',
 
@@ -115,9 +115,9 @@ return [
     |
     */
 
-//    'attributes' => [],
+////    'attributes' => [],
     'attributes' => [
-		'email' => 'E-Mail Address',
-		'password' => 'パスワード',
+		'Email' => 'Emailアドレス',
+		'Password' => 'パスワード',
 	],
 ];

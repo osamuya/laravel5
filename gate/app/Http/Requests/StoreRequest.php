@@ -31,18 +31,8 @@ class StoreRequest extends FormRequest
 		];
 
     }
-	
-# responseを上書きする
-# ajax,jsonで返答時以外は親に流す
 
-    public function response(array $errors)
-    {
-//        if ($this->ajax() || $this->wantsJson()) {
-//            # ここでいじれる
-//            return new JsonResponse(['message' => 'じゆうじざい！','errors'=>$errors], 422);
-//        }
-//
-//        parent::response($errors);
-    }
+
+
 
 }
