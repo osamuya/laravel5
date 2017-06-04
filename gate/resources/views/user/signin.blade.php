@@ -19,6 +19,9 @@ $(function(){
 		$.ajax({
 			type: 'POST',
 			url: "/user/signin/complete/{{$access_hash}}",
+			cache: false,
+			timeout: 10000,
+//			dataType: 'json',
 			data: {
 				Email: '<?php echo mt_rand(111,999); ?>@gmail.com',
 				Password: '<?php echo mt_rand(1,9999); ?>',
@@ -26,6 +29,7 @@ $(function(){
 			}
 		}).done(function(data) {
 			alert('success!!');
+			console.log(JSON.stringify(data));
 		}).fail(function(data) {
 			alert('error!!');
 //			console.log(data);
@@ -37,7 +41,6 @@ $(function(){
 </script>
 
 	<p>Form</p>
-<!--
 @if (count($errors) > 0)
     <div class="alert alert-danger">
         <ul>
@@ -47,7 +50,6 @@ $(function(){
         </ul>
     </div>
 @endif
--->
 	<form method="post" action="/user/signin/complete/{{$access_hash}}" id="" name="" class="">
 	<input type="text" name="Email" id="" class="">
 	<input type="password" name="Password" id="" class="">
