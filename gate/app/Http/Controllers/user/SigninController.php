@@ -23,17 +23,12 @@ class SigninController extends Controller
 		
 //		送信した内容を保存してFromに返す
 		$old_email = '';
-		if (isset($request->session()->all()["_old_input"]['Email'])) {
+		if (!empty($request->session()->all()["_old_input"]['Email'])) {
 			$old_email = $request->session()->all()["_old_input"]['Email'];
 		}
 		$old_password = '';
-		if (isset($request->session()->all()["_old_input"]['Password'])) {
+		if (!empty($request->session()->all()["_old_input"]['Password'])) {
 			$old_password = $request->session()->all()["_old_input"]['Password'];
-		}
-		
-//		var_dump($request->session()->get('Password'));
-		if ($request->session()->has('Password')) {
-			echo 'Hoooooooooooo!!!!!!!!';
 		}
 		
 		$access_hash = Utilities::makeAccessHash();
