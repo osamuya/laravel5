@@ -41,21 +41,41 @@ $(function(){
 </script>
 
 	<p>Form</p>
-@if (count($errors) > 0)
+{{--
+   @if (count($errors) > 0)
     <div class="alert alert-danger">
         <ul>
             @foreach ($errors->all() as $key=>$error)
                 <li>{{$key}}- {{ $error }}</li>
+                
+@if ($key === 0)
+    {{ $error }}
+@elseif ($key === 1)
+    {{ $error }}
+@endif
             @endforeach
         </ul>
     </div>
 @endif
+--}}
+
+{{-- comment --}}
+{{--
+すべてのエラーの取得 {{ $errors->all() }}
+特定のエラーの取得 {{ $errors->first('username') }} （※配列形式で結果が返ってくるため、first()で最初のものを取得している。）
+エラーの存在チェック {{ $errors->has('username') }}
+エラー数の取得{{ count($errors) }}
+--}}
 
 	<form method="post" action="/user/signin/complete/{{$access_hash}}" id="" name="" class="">
-	<input type="text" name="Email" id="" class="" value="{{$old_email}}">
-	<input type="password" name="Password" id="" class="" value="{{$old_password}}">
-	<input type="hidden" name="_token" value="{{csrf_token()}}">
-	<input type="submit" name="submit" id="submit" class="submit" value="Signin">
+
+		<input type="text" name="Email" id="" class="" value="{{$old_email}}">
+		<div>{{$errors->first('Email')}}</div>
+		<input type="password" name="Password" id="" class="" value="{{$old_password}}">
+		<div>{{$errors->first('Password')}}</div>
+		<input type="hidden" name="_token" value="{{csrf_token()}}">
+		<input type="submit" name="submit" id="submit" class="submit" value="Signin">
+	
 	</form>
 <h1>Ajaxのテスト</h1>
 <a href="#" id="ajaxtest">test</a>

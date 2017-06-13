@@ -14,6 +14,9 @@ class SampleController extends Controller
      */
     public function index()
     {
+		// mail test
+		
+		
         return view('sample/sample_ctrl');
     }
 	
